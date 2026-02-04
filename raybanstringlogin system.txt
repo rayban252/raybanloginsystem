@@ -1,17 +1,81 @@
-Compiling single file...
---------
-- Filename: C:\Users\philt\Documents\Untitled1.cpp
-- Compiler Name: TDM-GCC 4.8.1 64-bit Release
+#include <iostream>//library para sa input at output
+#include <string.h>//library s string pwede ring gumamit ng strting .h
+using namespace std;//para hindi gumamit ng std:: sa cout
+void login_strcmp();//function for login 
+void profile();//eto ang profile card function
 
-Processing C++ source file...
---------
-- C++ Compiler: C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\g++.exe
-- Command: g++.exe "C:\Users\philt\Documents\Untitled1.cpp" -o "C:\Users\philt\Documents\Untitled1.exe"  -I"C:\Program Files (x86)\Dev-Cpp\MinGW64\include" -I"C:\Program Files (x86)\Dev-Cpp\MinGW64\x86_64-w64-mingw32\include" -I"C:\Program Files (x86)\Dev-Cpp\MinGW64\lib\gcc\x86_64-w64-mingw32\4.8.1\include" -I"C:\Program Files (x86)\Dev-Cpp\MinGW64\lib\gcc\x86_64-w64-mingw32\4.8.1\include\c++" -L"C:\Program Files (x86)\Dev-Cpp\MinGW64\lib" -L"C:\Program Files (x86)\Dev-Cpp\MinGW64\x86_64-w64-mingw32\lib" -static-libgcc
 
-Compilation results...
---------
-- Errors: 0
-- Warnings: 0
-- Output Filename: C:\Users\philt\Documents\Untitled1.exe
-- Output Size: 1.76989269256592 MiB
-- Compilation Time: 0.70s
+
+
+
+int main(){
+	login_strcmp();
+	return 0;
+}
+
+
+void login_strcmp() {//this is the function for login
+	char username[] = "rayban";//eto ang username ko
+	char password[] = "abiguela";//eto ang password ko
+	  
+	char enteredUsername[50];//eto ang storage para sa username
+	char enteredPassword[50];//eto ang storage para sa password
+	
+	cout << "Enter username: ";//display or instraction to enterr username
+	cin >> enteredUsername;//eto naman ang userinput to go storage 
+	cout << "enter password: ";//same in the line 15 to this play and instraction for password
+	cin >> enteredPassword;//user input for password
+	 
+	 
+	 if (strcmp(username, enteredUsername) == 0 && strcmp(password, enteredPassword) == 0) {//this validatin for username and password
+	 	cout << "Login successful! Welcome, " << enteredUsername <<endl;//pag tama ang username at password and display username
+	 	profile();//to go profile card function
+	 
+	 	}else{//else if mali ang nilagay na username or password
+	 	cout << "Invalid credentials." << endl;//this is the display if the username or password is wrong
+	 	
+	 }	
+	 
+}
+	
+vvoid profile(){//the profile card function
+	system("cls");//system console to clear the screen
+	char username[] ="rayban";//variable for name
+	char lastname[] ="abiguela";//variable for lastname
+	char source[] = "welcome";//variable para sa welcome display ginamit ko sa strcpy
+	char destination[20];//eto  ang variable para ma copy ang sourcesa strcpy
+	char c_str[] = "rayban abiguela";//eto ang variable name kona kailangan i uppercase gamit ang strupr
+	char email[] = "@RAYBANABIGUELA";//eto ang variablr email kona need ko ilower case gamit ang strlwr
+    char rev[]="elam";//variable gender to reverse using strrev
+    char destinations[100] = "23 2000";//this is variable date to contaning tothe month
+    char sources[] = " september";//this variablefor month to connect in my birth date
+    strcat(destinations, sources);//this nis the syntaxto concatenating my birthday
+    strcpy(destination, source);//thisb is the syntax for strcpy for may name 
+    _strupr(c_str);//this is the syntax to uppercase my fullname
+    strlwr(email);//this is the syntax to lower case my email account
+    size_t length = strlen(c_str);
+    cout<<"===================================="<<endl;//cout for display again and the endl is to end the line
+    cout<<"=                 "<<destination <<endl;//cout displaywith distination to this the welcomeusing the strcpy
+    cout<<"===================================="<<endl;//cout displaywith endl is to the end the line
+    cout<<"= Fullname: "<<c_str<<endl;//cout fullname is display with the uppercase using strupr and the end is to the the line
+    cout<<"=The length of my name is:"<<length<<endl;//this is to showthe num. of my name
+    cout<<"= Email:   "<<email<<endl;//cout email is this displsy with the lowercse usingf strlwr ang the endl is to the end the line
+    cout<<"= Gender:  "<<rev<<endl;//cout gender is display with the riverse using strrev like emale to maleand the endl is to the the line
+    cout<<"= Birthday "<<destinations<<endl;//cout is display with the strcat  to concatenating the day and month and displayhere and the endl bis to the end the line
+    cout<<"======================================";//display and the end of my code thank yo
+	
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
