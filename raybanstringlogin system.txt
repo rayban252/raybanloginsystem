@@ -38,7 +38,7 @@ void login_strcmp() {//this is the function for login
 	 
 }
 	
-vvoid profile(){//the profile card function
+void profile(){//the profile card function
 	system("cls");//system console to clear the screen
 	char username[] ="rayban";//variable for name
 	char lastname[] ="abiguela";//variable for lastname
@@ -79,3 +79,4 @@ vvoid profile(){//the profile card function
 	
 	
 	
+
